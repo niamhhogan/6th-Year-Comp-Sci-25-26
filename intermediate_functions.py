@@ -21,6 +21,28 @@ print(check_even(7)) # Should return False
 Write a function is_teenager that takes an age as input and returns True if the age is between 13 and 19 (inclusive) and False otherwise. 
 Call the function with at least two examples to test it.
 """
+#Task 1 Solutions
+#using parameters as input
+def is_teenager(age):
+    if age >= 13 and age <=19:
+        return True
+    else:
+        return False
+
+print(is_teenager(12))
+print(is_teenager(15))
+
+#using an input statement
+def is_teenager_2():
+    age=int(input("How old are you?"))
+    if age >= 13 and age <=19:
+        return True
+    else:
+        return False
+print(is_teenager_2())
+
+
+
 
 # Example 2: Using Boolean Logic and Input in Functions
 def check_login(username, password): 
@@ -41,40 +63,71 @@ The function should return "Valid PIN" if both conditions are true, and "Invalid
 Example call: validate_pin("1234") should return "Valid PIN".
 """
 
-# Example 3: Debugging Task
+"""
+#Task 2 using code we already knew: 
+def validate_pin():
+    pin=int(input("Enter your PIN: "))
+    if pin >9999 and pin < 1000:
+        print("PIN must contain exactly 4 digits")
+    elif pin == 1234:
+        print("Valid PIN")
+    else:
+        print("Invalid PIN")
+print(validate_pin())
+"""
+
+def validate_pin():
+    pin = input("Enter your 4-digit PIN: ") #value stored as a string
+    
+    # Check if the PIN has exactly 4 characters and all are digits
+    if len(pin) == 4 and pin.isdigit(): #.isdigit() is a built in function
+        return "Valid PIN"
+    else:
+        return "Invalid PIN"
+
+print(validate_pin())
+
+# .isalpha() checks if the string contains letters
+        
+        
+
+# Task 3: Debugging Task
 """
 The following function is meant to return the square of a number, but there are errors in the code. 
 Find and fix the errors.
 """
 
+#fixed version:
 def square(number):
     if number < 0:
-        print"Invalid input, number must be positive"
-    return number * 2  # This is incorrect
+        print("Invalid input, number must be positive")
+    else: 
+        return number ** 2 
 
 print(square(4))  # Should return 16
 print(square(-3)) # Should print an error message
 
-""" Task 3: 
-Fix the function above so it correctly calculates the square of a positive number. If the input is negative, return an error message.
-"""
 
 # Example 4: Using Multiple Conditions in Functions
 def grade_calculator(score):
     if score >= 90:
-        return "A"
+        return "H1"
     elif score >= 80:
-        return "B"
+        return "H2"
     elif score >= 70:
-        return "C"
+        return "H3"
     elif score >= 60:
-        return "D"
+        return "H4"
+    elif score >= 50:
+        return "H5"
+    elif score >= 40:
+        return "H6"
     else:
-        return "F"
+        return "Fail"
 
 # Test the function
-print(grade_calculator(85)) # Should return "B"
-print(grade_calculator(59)) # Should return "F"
+print(grade_calculator(85)) # Should return "H2"
+print(grade_calculator(59)) # Should return "H5"
 
 """ Task 4: 
 Write a function check_discount that takes age and is_member as inputs:
