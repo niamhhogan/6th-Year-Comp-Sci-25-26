@@ -42,7 +42,7 @@ plt.show()
 #Task 3: create two lists (people's names, amount of siblings) and then create a line graph
 
 #different plot types
-#scatter plot
+#bar chart
 plt.bar(list_names, list_ages)
 plt.title("People's Ages")
 plt.xlabel("Name")
