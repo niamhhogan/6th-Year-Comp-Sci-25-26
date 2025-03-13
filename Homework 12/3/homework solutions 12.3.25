@@ -1,0 +1,87 @@
+#homework solutions 12/3/25
+#page 189 Q5
+
+def is_valid_email(email):
+    """Check if the email meets all the required conditions."""
+    if "@" in email and "." in email and len(email) >= 8:
+        return True
+    return False
+
+def email_validator():
+    """Prompt the user to enter a valid email address."""
+    while True:
+        email = input("Enter your email address: ").strip()  # Remove spaces
+        if is_valid_email(email):
+            print("Email is valid. Thank you!")
+            break  # Exit loop if valid
+        else:
+            print("Invalid email. Make sure it contains '@', at least one '.', and is at least 8 characters long.")
+
+# Run the email validation
+email_validator()
+
+
+#page 190 Q6
+def get_grade(level, percentage):
+    """Returns the grade based on level and percentage."""
+    if level == "higher":
+        if percentage >= 90:
+            return "H1"
+        elif percentage >= 80:
+            return "H2"
+        elif percentage >= 70:
+            return "H3"
+        elif percentage >= 60:
+            return "H4"
+        elif percentage >= 50:
+            return "H5"
+        elif percentage >= 40:
+            return "H6"
+        elif percentage >= 30:
+            return "H7"
+        else:
+            return "H8 (Fail)"
+    
+    elif level == "ordinary":
+        if percentage >= 90:
+            return "O1"
+        elif percentage >= 80:
+            return "O2"
+        elif percentage >= 70:
+            return "O3"
+        elif percentage >= 60:
+            return "O4"
+        elif percentage >= 50:
+            return "O5"
+        elif percentage >= 40:
+            return "O6"
+        elif percentage >= 30:
+            return "O7"
+        else:
+            return "O8 (Fail)"
+
+def main():
+    """Ask the student for their subject level and percentage, then display the grade."""
+    while True:
+        level = input("Enter your subject level (Higher/Ordinary): ").strip().lower()
+        if level in ["higher", "ordinary"]:
+            break
+        else:
+            print("Invalid input. Please enter 'Higher' or 'Ordinary'.")
+    
+    while True:
+        try:
+            percentage = float(input("Enter your exam percentage (0-100): "))
+            if 0 <= percentage <= 100:
+                break
+            else:
+                print("Percentage must be between 0 and 100.")
+        except ValueError:
+            print("Invalid input. Please enter a valid number.")
+
+    grade = get_grade(level, percentage)
+    print(f"Your grade is: {grade}")
+
+# Run the program
+main()
+
