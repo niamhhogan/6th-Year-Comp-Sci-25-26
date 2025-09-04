@@ -4,7 +4,7 @@
 # ---------------------------------------------------------------
 
 """
-Leaving Certificate Learning Outcomes (Relevant Only)
+Leaving Certificate Learning Outcomes
 
 Strand 1: Practices and Principles
 - 1.3 solve problems by deconstructing them into smaller
@@ -183,57 +183,88 @@ print(result)  # Output: COMPUTER
 
 
 
-
 # ===============================================================
-# SECTION D — Introduction to Unit Testing
+# SECTION D — Testing
 # ===============================================================
 
 # NOTES:
-# - A unit test checks that one small piece of code (usually a function) works correctly.
-# - We do this by comparing the actual output of the function with the expected output.
-# - Python has a simple way to do this using "assert".
-# - assert <condition> will stop the program with an error if the condition is False.
-# - If all asserts pass, the program keeps running with no messages (no news is good news).
-print("\nSECTION D — Unit Testing...")
+# - Testing checks that code works correctly before it is used.
+# - In Python we use 'assert' to compare expected vs actual results.
+#
+# What is 'assert'?
+# - Syntax:  assert condition
+# - If the condition is True  -> the program continues (no message).
+# - If the condition is False -> the program stops with an AssertionError.
+# - We use assert to check that the ACTUAL output of a function
+#   matches the EXPECTED output we worked out in advance.
+#
+# Unit testing:
+# - Tests ONE small piece of code in isolation (usually a single function).
+# - Purpose: check if that function gives the right answer for given inputs.
+# - It does not worry about the rest of the program, only that one "unit".
+# - Example: rectangle_area(3,4) should return 12.
+#
+# Functional testing:
+# - Tests a COMPLETE FEATURE from start to finish, as a user would use it.
+# - Purpose: check if the feature behaves correctly overall,
+#   including validation, calculation, and messages.
+# - Example: the area_feature should give "Area is 12" for valid inputs
+#   and an error message if inputs are invalid.
 
-# Functions to test
-def add(a, b):
-    return a + b
-
-def is_even(n):
-    return n % 2 == 0
 
 
-# ---------------------------------------------------------------
+def rectangle_area(width, height):
+    return width * height
+
+def area_feature(width, height):
+    if width <= 0 or height <= 0:
+        return "Error: width and height must be positive."
+    area = rectangle_area(width, height)
+    return f"Area is {area}"
+
+
 # Example: Using assert
-# ---------------------------------------------------------------
-# This test will pass because add(2, 3) really is 5
-assert add(2, 3) == 5
-
-# If you change it to assert add(2, 3) == 6, the program will stop with an error.
-print("Example test passed!")
+assert 2 + 2 == 4
+# If you change it to assert 2 + 2 == 5, the program would stop with an error.
+print("Assert example passed!")
 
 
-# ---------------------------------------------------------------
-# Task D1: Basic Unit Tests
-# ---------------------------------------------------------------
+# Example Unit Tests (testing one function in isolation)
+# We are only testing rectangle_area here, nothing else.
+assert rectangle_area(3, 4) == 12
+assert rectangle_area(5, 2) == 10
+assert rectangle_area(2.5, 2) == 5.0
+print("Unit tests passed!")
+
+
+# Example Functional Tests (testing the whole feature)
+# We now test area_feature, which includes input checks + calculation + message.
+assert area_feature(3, 4) == "Area is 12"
+assert area_feature(5, 2) == "Area is 10"
+assert area_feature(-3, 4) == "Error: width and height must be positive."
+assert area_feature(3, 0) == "Error: width and height must be positive."
+print("Functional tests passed!")
+
+
+# Task D1: Write your own unit tests
 # Instructions:
-# 1. Write asserts to test:
-#    - add(2,3) == 5
-#    - add(-1,1) == 0
-#    - is_even(4) == True
-#    - is_even(5) == False
-# 2. If all tests pass, print "Basic tests passed!"
+# 1) Create a function add(a, b) that returns the sum of a and b.
+# 2) Write asserts to test:
+#    - add(2, 3) == 5
+#    - add(-1, 1) == 0
+#    - add(0, 0) == 0
+# 3) Print "Basic unit tests passed!" if your asserts succeed.
 
 
-# ---------------------------------------------------------------
-# Task D2: Extended Unit Tests
-# ---------------------------------------------------------------
+# Task D2: Write your own functional tests
 # Instructions:
-# 1. Test rectangle_area(3,4) == 12.
-# 2. Test power(2,5) == 32.
-# 3. Test grade_band with one value from each category.
-# 4. If all correct, print "Extended tests passed!".
+# 1) Create a simple feature called compare_feature(a, b) that:
+#       - returns "First is larger"  if a > b
+#       - returns "Second is larger" if b > a
+#       - returns "Numbers are equal" if a == b
+# 2) Write asserts to test all three cases.
+# 3) Print "Functional tests passed!" if your asserts succeed.
+
 
 
 
