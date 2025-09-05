@@ -51,7 +51,7 @@ By the end of this lesson, you will be able to:
 # - Be careful with boundary values (e.g., 17 vs 18).
 
 
-def age_category(age: int) -> str:
+def age_category(age):
     """Return 'Child' (<13), 'Teenager' (13–17), or 'Adult' (18+)."""
     if age < 13:
         return "Child"
@@ -60,9 +60,9 @@ def age_category(age: int) -> str:
     else:
         return "Adult"
 
-print("Age 12 ->", age_category(12))
-print("Age 15 ->", age_category(15))
-print("Age 30 ->", age_category(30))
+print("Age 12", age_category(12))
+print("Age 15", age_category(15))
+print("Age 30", age_category(30))
 
 # ---------------------------------------------------------------
 # Task A1: Grade Bands
@@ -281,4 +281,5 @@ Today we revised:
 - Difference between print vs return.
 - Writing and running simple unit tests with assert.
 """
+
 
