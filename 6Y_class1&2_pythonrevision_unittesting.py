@@ -212,6 +212,57 @@ print(result)  # Output: COMPUTER
 #   and an error message if inputs are invalid.
 
 
+"""
+Example of unit test manually:
+
+def volCylinder(radius, height):
+    volume = 3.14 * (radius**2) * height
+    return volume
+
+# step 1: create test data
+test_radius = 2
+test_height = 1
+
+# step 2: calculate expected value
+expected_volume = 3.14 * (test_radius**2) * test_height
+
+# step 3: call function and pass the test values as arguments
+test_answer = volCylinder(test_radius, test_height)
+
+# step 4: check if the value returned by the function matches the expected value
+passed = True
+if expected_volume != test_answer:
+    passed = False
+    
+return passed
+"""
+
+
+# ===============================================================
+# Example wrapped into functions
+# ===============================================================
+
+def volCylinder(radius, height):
+    """Return volume of a cylinder: π r^2 h (using 3.14 for π)."""
+    volume = 3.14 * (radius**2) * height
+    return volume
+
+def unit_test():
+    test_radius = 2
+    test_height = 1
+    expected_volume = 3.14 * (test_radius**2) * test_height
+    test_answer = volCylinder(test_radius, test_height)
+    passed = True
+    if expected_volume != test_answer:
+        passed = False
+    return passed
+
+print("Test passed:", unit_test())
+
+
+# ===============================================================
+# Examples using assert
+# ===============================================================
 
 def rectangle_area(width, height):
     return width * height
@@ -229,7 +280,7 @@ assert 2 + 2 == 4
 print("Assert example passed!")
 
 
-# Example Unit Tests (testing one function in isolation)
+# Example Unit Tests using assert (testing one function in isolation)
 # We are only testing rectangle_area here, nothing else.
 assert rectangle_area(3, 4) == 12
 assert rectangle_area(5, 2) == 10
@@ -246,7 +297,10 @@ assert area_feature(3, 0) == "Error: width and height must be positive."
 print("Functional tests passed!")
 
 
+# ===============================================================
 # Task D1: Write your own unit tests
+# ===============================================================
+
 # Instructions:
 # 1) Create a function add(a, b) that returns the sum of a and b.
 # 2) Write asserts to test:
@@ -255,8 +309,20 @@ print("Functional tests passed!")
 #    - add(0, 0) == 0
 # 3) Print "Basic unit tests passed!" if your asserts succeed.
 
+def add(a, b):
+    return a + b
 
+# --- Unit tests for add ---
+assert add(2, 3) == 5
+assert add(-1, 1) == 0
+assert add(0, 0) == 0
+print("Basic unit tests passed!")
+
+
+# ===============================================================
 # Task D2: Write your own functional tests
+# ===============================================================
+
 # Instructions:
 # 1) Create a simple feature called compare_feature(a, b) that:
 #       - returns "First is larger"  if a > b
@@ -265,13 +331,50 @@ print("Functional tests passed!")
 # 2) Write asserts to test all three cases.
 # 3) Print "Functional tests passed!" if your asserts succeed.
 
+def compare_feature(a, b):
+    if a > b:
+        return "First is larger"
+    elif b > a:
+        return "Second is larger"
+    else:
+        return "Numbers are equal"
 
+# --- Functional tests ---
+assert compare_feature(5, 3) == "First is larger"
+assert compare_feature(2, 9) == "Second is larger"
+assert compare_feature(7, 7) == "Numbers are equal"
+print("Functional tests passed!")
+
+# ===============================================================
+# Comprehension Questions 
+# ===============================================================
+
+# 1. What is the difference between unit testing and functional testing?
+# 2. What does assert do if the condition is True? What if it is False?
+# 3. In the volCylinder test, why do we calculate an expected_volume before comparing?
+# 4. Why do we test area_feature with both valid and invalid inputs?
+# 5. A student writes: assert rectangle_area(3, 4) == "12". What is the mistake?
+
+# ===============================================================
+# Extra Tasks to Try
+# ===============================================================
+
+# Task A: Write a function max_of_three(a, b, c) that returns the largest number.
+#         Add at least 3 unit tests using assert.
+
+# Task B: Extend the unit tests for add(a, b) to include:
+#         - negative numbers
+#         - decimals
+
+# Task C: Write a function safe_divide(a, b) that:
+#         - returns "Cannot divide by zero" if b == 0
+#         - otherwise returns a / b
+#         Add both unit tests and functional tests.
 
 
 # ===============================================================
 # SECTION E — Recap / Consolidation
 # ===============================================================
-
 
 """
 Today we revised:
@@ -281,5 +384,8 @@ Today we revised:
 - Difference between print vs return.
 - Writing and running simple unit tests with assert.
 """
+
+
+
 
 
