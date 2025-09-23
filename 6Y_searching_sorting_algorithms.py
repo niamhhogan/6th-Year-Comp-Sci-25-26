@@ -218,4 +218,52 @@ for i in range(len(list_)):
 -Goes to the last index
 -Does one useless extra pass
 -Technically works but unnecessary
+
+"""
+
+
+"""
+Bubble sort is a sorting algorithm that repeatedly compares pairs of adjacent items 
+and swaps them if they are in the wrong order. 
+This process continues until no swaps are needed, meaning the list is sorted.
+
+Example:
+Unsorted list: [5, 2, 9, 1]
+Pass 1: [2, 5, 1, 9]
+Pass 2: [2, 1, 5, 9]
+Pass 3: [1, 2, 5, 9]  -> Sorted
+"""
+
+list_1 = [10, 15, 70, 4, 28, 90]
+
+n = len(list_1)
+for i in range(n-1):
+    print("Pass", i, ":", list_1)
+    swapped = False  # keeps track if a swap happened in this pass
+    
+    # compare each pair of adjacent elements
+    for j in range(n-1-i):
+        if list_1[j] > list_1[j+1]:
+            # swap if they are in the wrong order
+            list_1[j], list_1[j+1] = list_1[j+1], list_1[j]
+            swapped = True
+    
+    # optimisation: if no swaps happened, the list is already sorted
+    if not swapped:
+        break
+
+print("Sorted:", list_1)
+
+"""
+✅ Advantages:
+- Simple to understand and implement — good for teaching how sorting works.
+- Works on any list, regardless of data type (numbers, strings, etc.).
+- Stable sort — equal items keep their original order.
+- Can stop early if the list becomes sorted before completing all passes.
+
+⚠️ Limitations:
+- Very slow for large lists (O(n^2) time complexity).
+- Performs many unnecessary comparisons and swaps.
+- Rarely used in practice except for teaching purposes.
+- Less efficient than selection sort or insertion sort in most cases.
 """
