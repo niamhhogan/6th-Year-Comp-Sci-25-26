@@ -267,3 +267,156 @@ print("Sorted:", list_1)
 - Rarely used in practice except for teaching purposes.
 - Less efficient than selection sort or insertion sort in most cases.
 """
+
+#------------------------------------------------------------------------------------------------------------
+
+#Insertion Sort
+"""
+Insertion sort is a sorting algorithm that builds the final sorted list one item at a time.
+It takes each new element and inserts it into its correct position among the already sorted elements.
+
+Method:
+1. Start from the second element (index 1). Assume the first element is already sorted.
+2. Compare the current element with the elements before it.
+3. Shift larger elements one position to the right.
+4. Insert the current element into the correct place.
+5. Repeat for each element until the list is sorted.
+
+Example:
+Unsorted list: [50, 70, 30, 60, 20]
+Pass 1: [50, 70, 30, 60, 20]
+Pass 2: [30, 50, 70, 60, 20]
+Pass 3: [30, 50, 60, 70, 20]
+Pass 4: [20, 30, 50, 60, 70] -> Sorted
+"""
+
+list_1 = [50, 70, 30, 60, 20]
+
+# Insertion Sort
+for i in range(1, len(list_1)):
+    print("Pass", i, ":", list_1)
+    current = list_1[i]  # the element to insert
+    j = i - 1
+    
+    # shift elements of the sorted part to the right to make room
+    while j >= 0 and list_1[j] > current:
+        list_1[j+1] = list_1[j]
+        j -= 1
+    
+    # insert the current element into the correct place
+    list_1[j+1] = current
+
+print("Sorted:", list_1)
+
+"""
+✅ Advantages:
+- Simple to implement and understand.
+- Efficient for small lists or nearly sorted lists (runs quickly in those cases).
+- Stable sort — equal items keep their original order.
+- Works in place — no extra memory needed.
+
+⚠️ Limitations:
+- Very slow on large lists (O(n^2) time complexity).
+- Less efficient than more advanced algorithms like merge sort or quicksort.
+- Performance depends on how “sorted” the data already is.
+"""
+#------------------------------------------------------------------------------------------------------------
+
+#Quicksort
+"""
+Quicksort is a divide-and-conquer sorting algorithm.
+It works by selecting a "pivot" element and splitting the list into two parts:
+- Left: elements smaller than the pivot
+- Right: elements larger than the pivot
+It then recursively sorts each part and combines them.
+
+Method:
+1. Choose a pivot (often the last element).
+2. Partition the list into two sublists:
+   - Elements less than pivot
+   - Elements greater than pivot
+3. Recursively apply quicksort to each sublist.
+4. Combine the sorted sublists with the pivot in the middle.
+
+Example:
+Unsorted list: [50, 70, 30, 60, 20]
+Pivot = 20 → Left: []  Right: [50, 70, 30, 60]
+Pivot = 60 → Left: [50, 30]  Right: [70]
+Pivot = 30 → Left: []  Right: [50]
+Sorted: [20, 30, 50, 60, 70]
+"""
+
+def quicksort(list_):
+    if len(list_) <= 1:
+        return list_
+    else:
+        pivot = list_[-1]  # choose last element as pivot
+        left = [x for x in list_[:-1] if x <= pivot]
+        right = [x for x in list_[:-1] if x > pivot]
+        return quicksort(left) + [pivot] + quicksort(right)
+
+list_1 = [50, 70, 30, 60, 20]
+print("Unsorted:", list_1)
+sorted_list = quicksort(list_1)
+print("Sorted:", sorted_list)
+
+"""
+✅ Advantages:
+- Very fast in practice (average O(n log n)).
+- Efficient for large datasets.
+- Works well for recursive thinking and divide-and-conquer problems.
+- Can be implemented in-place (low memory usage).
+
+⚠️ Limitations:
+- Worst-case performance is slow (O(n^2)) if poor pivots are chosen.
+- Recursive implementation can be harder to understand.
+- Not stable in its basic form (equal items may change order).
+"""
+#------------------------------------------------------------------------------------------------------------
+
+#Merge Sort
+"""
+Merge sort is a divide-and-conquer sorting algorithm.
+It splits a list into halves, sorts each half, and then merges them together.
+"""
+
+def merge_sort(list_):
+    if len(list_) <= 1:
+        return list_
+    
+    # Step 1: Split list into two halves
+    mid = len(list_) // 2
+    left = list_[:mid]
+    right = list_[mid:]
+    
+    # Step 2: Recursively sort each half
+    left = merge_sort(left)
+    right = merge_sort(right)
+    
+    # Step 3: Merge the two sorted halves
+    return merge(left, right)
+
+def merge(left, right):
+    result = []
+    i = j = 0
+    
+    # Compare items from both halves and build sorted list
+    while i < len(left) and j < len(right):
+        if left[i] < right[j]:
+            result.append(left[i])
+            i += 1
+        else:
+            result.append(right[j])
+            j += 1
+    
+    # Add remaining elements
+    result.extend(left[i:])
+    result.extend(right[j:])
+    
+    return result
+
+list_1 = [50, 70, 30, 60, 20]
+print("Unsorted:", list_1)
+print("Sorted:", merge_sort(list_1))
+
+
