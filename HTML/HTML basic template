@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Webpage</title>
+</head>
+<body>
+
+  <!-- Header Section -->
+  <header>
+    <h1><!-- Add your main heading here --></h1>
+    <p><!-- Add a short introduction (you can use italics, bold, underline) --></p>
+    <hr>
+  </header>
+
+  <!-- About Section -->
+  <section>
+    <h2>About</h2>
+    <p><!-- Write a paragraph about yourself or your topic --></p>
+  </section>
+
+  <!-- Line Break Example -->
+  <section>
+    <h2>Address or Poem</h2>
+    <p>
+      <!-- Use <br> to put each part on a new line -->
+    </p>
+  </section>
+
+  <!-- Links Section -->
+  <section>
+    <h2>My Links</h2>
+    <p><!-- Add a link with <a href="URL">Clickable Text</a> --></p>
+  </section>
+
+  <!-- Images Section -->
+  <section>
+    <h2>My Images</h2>
+    <!-- Add an image: <img src="IMAGE_URL" alt="description" width="200"> -->
+  </section>
+
+  <!-- Lists Section -->
+  <section>
+    <h2>My Lists</h2>
+    <h3>Unordered List (Bullet Points)</h3>
+    <ul>
+      <!-- Add list items using <li> -->
+    </ul>
+
+    <h3>Ordered List (Numbers)</h3>
+    <ol>
+      <!-- Add list items using <li> -->
+    </ol>
+  </section>
+
+  <!-- Video Section -->
+  <section>
+    <h2>My Video</h2>
+    <!-- Embed a video using <iframe> -->
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <hr>
+    <p>&copy; 2025 <!-- Add your name or class here --></p>
+  </footer>
+
+</body>
+</html>
