@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>6th Year Computer Science: HTML</title>
+</head>
+<body>
+
+  <!-- Header Section -->
+  <header>
+    <h1>HTML Introduction</h1>
+    <p><i>We are now learning about HTML</i></p>
+    <hr>
+  </header>
+
+  <!-- Headings and Paragraphs -->
+  <section>
+    <h2>About This Page</h2>
+    <p>This page shows the basics of <b>HTML</b> for building websites.</p>
+    <p>You can use <b>bold</b>, <i>italics</i>, and <u>underlined</u> text.</p>
+  </section>
+
+  <!-- Line Break Example -->
+  <section>
+    <h2>Line Breaks</h2>
+    <p>This is the first line.<br>This is the second line.</p>
+    <p>
+      Example address with line breaks:<br>
+      Harold's Cross<br>
+      Dublin<br>
+      Ireland
+    </p>
+  </section>
+
+  <!-- Hyperlinks -->
+  <section>
+    <h2>Useful Links</h2>
+    <p>Visit <a href="https://www.w3schools.com" target="_blank">W3Schools</a> to learn more.</p>
+    <p>Check out <a href="https://hcetss.ie" target="_blank">HCETSS</a>.</p>
+  </section>
+
+  <!-- Images -->
+  <section>
+    <h2>Images</h2>
+    <p>Here is an example image (150px wide):</p>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" 
+         alt="JavaScript Logo" width="150">
+    <p>And another resized to 300 pixels wide:</p>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" 
+         alt="JavaScript Logo Larger" width="300">
+  </section>
+
+  <!-- Lists -->
+  <section>
+    <h2>Lists</h2>
+    <h3>Favourite Subjects (Bullet Points)</h3>
+    <ul>
+      <li>Computer Science</li>
+      <li>Maths</li>
+      <li>Coding</li>
+    </ul>
+
+    <h3>Steps to Make a Webpage (Ordered List)</h3>
+    <ol>
+      <li>Create a new HTML file.</li>
+      <li>Add headings and paragraphs.</li>
+      <li>Insert images and links.</li>
+      <li>Save and open in a browser.</li>
+    </ol>
+  </section>
+
+  <!-- Videos -->
+  <section>
+    <h2>Videos</h2>
+    <p>Here is a sample YouTube video embedded:</p>
+    <iframe width="400" height="225" 
+            src="https://www.youtube.com/embed/dD2EISBDjWM" 
+            title="YouTube video" frameborder="0" allowfullscreen>
+    </iframe>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <hr>
+    <p>&copy; 2025/2026 6th Year Computer Science</p>
+  </footer>
+
+</body>
+</html>
