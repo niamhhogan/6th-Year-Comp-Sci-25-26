@@ -51,6 +51,24 @@ nav ul li a:hover {
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
+/* Table styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #003366;
+  color: white;
+}
+
 /* Footer styling */
 footer {
   background-color: #003366;
@@ -59,3 +77,4 @@ footer {
   padding: 10px 0;
   margin-top: 30px;
 }
+
