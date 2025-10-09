@@ -1,1 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="A sample HTML page with CSS navigation styling.">
+  <meta name="author" content="Student Name">
+  <title>6th Year Computer Science: CSS Layout</title>
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>My Website</h1>
+    <p><i>Now with navigation and layout styling</i></p>
+
+    <!-- Navigation Bar -->
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Home Section -->
+  <section id="home" class="section">
+    <h2>Home</h2>
+    <p>Welcome to my website. This page includes all the content from previous classes with new layout and navigation styling.</p>
+  </section>
+
+  <!-- About Section with Table -->
+  <section id="about" class="section">
+    <h2>About Me</h2>
+    <p>This is the About section of the site. Below is an example timetable using a table.</p>
+    <table border="1">
+      <tr>
+        <th>Day</th>
+        <th>Activity</th>
+      </tr>
+      <tr>
+        <td>Monday</td>
+        <td>Coding Practice</td>
+      </tr>
+      <tr>
+        <td>Tuesday</td>
+        <td>Maths Revision</td>
+      </tr>
+      <tr>
+        <td>Wednesday</td>
+        <td>Computer Science Project</td>
+      </tr>
+    </table>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="section">
+    <h2>Projects</h2>
+    <p>This section includes a video, audio, and an embedded micro:bit project.</p>
+
+    <!-- YouTube Video -->
+    <iframe width="400" height="225" 
+            src="https://www.youtube.com/embed/dD2EISBDjWM" 
+            title="YouTube video" frameborder="0" allowfullscreen>
+    </iframe>
+
+    <!-- Audio -->
+    <audio controls>
+      <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+
+    <!-- Micro:bit Embed -->
+    <iframe src="https://makecode.microbit.org/---run?id=_exampleEmbedCode" 
+            width="400" height="400" allowfullscreen></iframe>
+  </section>
+
+  <!-- Contact Section with Form -->
+  <section id="contact" class="section">
+    <h2>Contact Me</h2>
+    <form>
+      <label for="name">Name:</label><br>
+      <input type="text" id="name" name="name"><br><br>
+
+      <label for="email">Email:</label><br>
+      <input type="email" id="email" name="email"><br><br>
+
+      <label for="reason">Reason for Contact:</label><br>
+      <select id="reason" name="reason">
+        <option value="question">Question</option>
+        <option value="feedback">Feedback</option>
+        <option value="other">Other</option>
+      </select><br><br>
+
+      <label for="message">Message:</label><br>
+      <textarea id="message" name="message" rows="4" cols="30"></textarea><br><br>
+
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025/2026 6th Year Computer Science</p>
+  </footer>
+
+</body>
+</html>
 
