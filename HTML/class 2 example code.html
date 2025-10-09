@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>6th Year Computer Science: HTML</title>
+</head>
+<body>
+
+  <!-- Header & Navigation -->
+  <header>
+    <h1>HTML Website Example</h1>
+    <p><i>Building on our Class 1 page</i></p>
+    <hr>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Home Section -->
+  <section id="home">
+    <h2>Home</h2>
+    <p>Welcome to my website. This page now includes structured sections and navigation.</p>
+  </section>
+
+  <!-- About Section with Table -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>This is the About section of the site. Below is an example timetable using a table.</p>
+
+    <table border="1">
+      <tr>
+        <th>Day</th>
+        <th>Activity</th>
+      </tr>
+      <tr>
+        <td>Monday</td>
+        <td>Coding Practice</td>
+      </tr>
+      <tr>
+        <td>Tuesday</td>
+        <td>Maths Revision</td>
+      </tr>
+      <tr>
+        <td>Wednesday</td>
+        <td>Computer Science Project</td>
+      </tr>
+    </table>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects">
+    <h2>Projects</h2>
+    <p>Here is an image and a video from Class 1, now organised inside the Projects section.</p>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" 
+         alt="JavaScript Logo" width="150">
+    <iframe width="400" height="225" 
+            src="https://www.youtube.com/embed/dD2EISBDjWM" 
+            title="YouTube video" frameborder="0" allowfullscreen>
+    </iframe>
+  </section>
+
+  <!-- Contact Section with Form -->
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form>
+      <label for="name">Name:</label><br>
+      <input type="text" id="name" name="name"><br><br>
+
+      <label for="email">Email:</label><br>
+      <input type="email" id="email" name="email"><br><br>
+
+      <label for="reason">Reason for Contact:</label><br>
+      <select id="reason" name="reason">
+        <option value="question">Question</option>
+        <option value="feedback">Feedback</option>
+        <option value="other">Other</option>
+      </select><br><br>
+
+      <label for="message">Message:</label><br>
+      <textarea id="message" name="message" rows="4" cols="30"></textarea><br><br>
+
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <hr>
+    <p>&copy; 2025/2026 6th Year Computer Science</p>
+  </footer>
+
+</body>
+</html>
