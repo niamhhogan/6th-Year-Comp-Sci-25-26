@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="A template HTML page for student projects.">
+  <meta name="author" content="Your Name Here">
+  <title>Student Project Template - HTML, CSS and JavaScript</title>
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="template-style.css">
+  
+  <!-- External JavaScript -->
+  <script src="template-script.js"></script>
+</head>
+<body>
+
+  <header>
+    <h1>Your Project Title Here</h1>
+    <p><i>Add your project description here</i></p>
+    
+    <!-- JavaScript Interactive Buttons -->
+    <div style="margin: 15px 0;">
+      <button onclick="welcomeMessage()" style="margin: 5px;">Button 1</button>
+      <button onclick="exampleFunction()" style="margin: 5px;">Button 2</button>
+      <button onclick="anotherFunction()" style="margin: 5px;">Button 3</button>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#javascript">JavaScript</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Home Section -->
+  <section id="home" class="section">
+    <h2>Welcome Section</h2>
+    <p>Replace this with your own content. This webpage demonstrates <b>all the key features</b> we've learned in our <i>Computer Science</i> classes!</p>
+    
+    <h3>What You Can Include:</h3>
+    <ul>
+      <li><b>Images</b> - Add your own images</li>
+      <li><i>Videos</i> - Embed your favorite videos</li>
+      <li><u>Audio Files</u> - Include your own audio</li>
+      <li><b><i>Tables</i></b> - Organize your data</li>
+      <li>Text formatting - <b>Bold</b>, <i>italic</i>, and <u>underlined</u> text</li>
+    </ul>
+
+    <!-- Example Images -->
+    <h3>Your Images</h3>
+    <p>Replace these with your own images:</p>
+    <!-- Replace these src paths with your own image files -->
+    <img src="your-image-1.jpg" alt="Description of your first image" width="300" height="200">
+    <img src="your-image-2.jpg" alt="Description of your second image" width="300" height="200">
+    
+    <p><b>Remember:</b> Update the image file names and descriptions!</p>
+  </section>
+
+  <!-- About Section with Table -->
+  <section id="about" class="section">
+    <h2>About Section - Your Information</h2>
+    <p>Tell people about yourself and demonstrate <b>text formatting techniques</b>:</p>
+    
+    <h3>Text Formatting Examples:</h3>
+    <p>You can make text <b>bold</b> to emphasize important points.</p>
+    <p>You can make text <i>italic</i> to add emphasis or show titles.</p>
+    <p>You can <u>underline</u> text to highlight specific content.</p>
+    <p>You can even combine formatting: <b><i>bold and italic</i></b>, or <b><u>bold and underlined</u></b>!</p>
+    
+    <h3>Your Schedule Table</h3>
+    <p>Create your own table - this is just an example:</p>
+    <table border="1">
+      <tr>
+        <th>Day</th>
+        <th>Activity</th>
+        <th>Time</th>
+        <th>Notes</th>
+      </tr>
+      <tr>
+        <td>Monday</td>
+        <td>Replace with your activity</td>
+        <td>Your time</td>
+        <td><b>Your notes</b></td>
+      </tr>
+      <tr>
+        <td>Tuesday</td>
+        <td>Replace with your activity</td>
+        <td>Your time</td>
+        <td><i>Your notes</i></td>
+      </tr>
+      <tr>
+        <td>Wednesday</td>
+        <td>Replace with your activity</td>
+        <td>Your time</td>
+        <td><u>Your notes</u></td>
+      </tr>
+    </table>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="section">
+    <h2>Your Projects and Media</h2>
+    <p>Showcase your multimedia content:</p>
+
+    <h3>Your Video</h3>
+    <p>Replace this with your own video:</p>
+    <!-- Replace the src with your own YouTube video embed code -->
+    <iframe width="400" height="225" 
+            src="https://www.youtube.com/embed/YOUR_VIDEO_ID_HERE" 
+            title="Your video title" frameborder="0" allowfullscreen>
+    </iframe>
+
+    <h3>Your Audio</h3>
+    <p>Add your own audio file:</p>
+    <!-- Replace with your own audio file -->
+    <audio controls>
+      <source src="your-audio-file.mp3" type="audio/mpeg">
+      <source src="your-audio-file.m4a" type="audio/mp4">
+      Your browser does not support the audio element.
+    </audio>
+
+    <h3>Your Interactive Project</h3>
+    <p>Add your own micro:bit project or other interactive content:</p>
+    
+    <!-- Replace with your own micro:bit project embed code -->
+    <div style="width:100%;max-width:500px;height:600px;">
+      <iframe style="width:100%;height:100%;" 
+              src="https://makecode.microbit.org/---run?id=YOUR_PROJECT_ID_HERE" 
+              allowfullscreen="allowfullscreen" 
+              sandbox="allow-popups allow-forms allow-scripts allow-same-origin" 
+              frameborder="0">
+      </iframe>
+    </div>
+    
+    <p><i>Replace this with your actual project embed code!</i></p>
+  </section>
+
+  <!-- JavaScript Section -->
+  <section id="javascript" class="section">
+    <h2>Your JavaScript Features</h2>
+    <p>Add your own <b>JavaScript</b> functions to make your site <i>interactive</i>!</p>
+    
+    <h3>Your Interactive Buttons:</h3>
+    <div style="margin: 15px 0;">
+      <button onclick="yourFunction1()" style="margin: 5px; padding: 8px 15px;">Your Button 1</button>
+      <button onclick="yourFunction2()" style="margin: 5px; padding: 8px 15px;">Your Button 2</button>
+      <button onclick="yourFunction3()" style="margin: 5px; padding: 8px 15px;">Your Button 3</button>
+    </div>
+    
+    <div style="margin: 15px 0;">
+      <button onclick="toggleDarkMode()" style="margin: 5px; padding: 8px 15px;">Toggle Dark Mode</button>
+    </div>
+    
+    <h3>Live Information Display:</h3>
+    <p id="info-display" style="background-color: #f0f8ff; padding: 10px; border-radius: 5px; font-family: monospace;">
+      This will be updated by JavaScript
+    </p>
+    
+    <h3>Your Dynamic List:</h3>
+    <ul id="dynamic-list" style="background-color: #f9f9f9; padding: 15px; border-radius: 5px;">
+      <!-- This will be populated by your JavaScript -->
+    </ul>
+    
+    <p><i>Create your own JavaScript functions in the template-script.js file!</i></p>
+  </section>
+
+  <!-- Contact Section with Form -->
+  <section id="contact" class="section">
+    <h2>Contact Form</h2>
+    <p>Customize this form for your needs:</p>
+    
+    <form>
+      <label for="name"><b>Name:</b></label><br>
+      <input type="text" id="name" name="name" placeholder="Enter your name"><br><br>
+
+      <label for="email"><i>Email Address:</i></label><br>
+      <input type="email" id="email" name="email" placeholder="your.email@example.com"><br><br>
+
+      <label for="reason"><u>Reason for Contact:</u></label><br>
+      <select id="reason" name="reason">
+        <option value="option1">Your Option 1</option>
+        <option value="option2">Your Option 2</option>
+        <option value="option3">Your Option 3</option>
+        <option value="other">Other</option>
+      </select><br><br>
+
+      <label for="message"><b><i>Message:</i></b></label><br>
+      <textarea id="message" name="message" rows="4" cols="50" 
+                placeholder="Type your message here..."></textarea><br><br>
+
+      <button type="submit"><b>Send Message</b></button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Your Name - Your Project Title</p>
+  </footer>
+
+</body>
+</html>
