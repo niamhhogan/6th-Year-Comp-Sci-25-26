@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Dashboard</title>
+    
+    <!-- Link to CSS file -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Chart.js library for creating charts -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- ⭐ STUDENTS: Change this to your project title -->
+        <h1>My Data Dashboard</h1>
+        
+        <!-- Section 1: Input form -->
+        <div class="section">
+            <!-- ⭐ STUDENTS: Change this heading to match your data topic -->
+            <h2>Add Data</h2>
+            
+            <!-- ⭐ STUDENTS: Change the label to describe your data (e.g., "Hours Studied:", "Temperature (°C):") -->
+            <label for="userInput">Enter your data:</label>
+            
+            <!-- ⭐ STUDENTS: Change input type if needed (type="number" for numbers, type="text" for text) -->
+            <!-- ⭐ STUDENTS: Change placeholder text to guide users -->
+            <input type="text" id="userInput" placeholder="Type here">
+            <button id="submitBtn">Submit</button>
+        </div>
+
+        <!-- Section 2: Chart display -->
+        <div class="section">
+            <!-- ⭐ STUDENTS: Change this heading (e.g., "Hours Over Time", "Temperature Readings") -->
+            <h2>Data Chart</h2>
+            <!-- Canvas element for the chart -->
+            <canvas id="dataChart"></canvas>
+        </div>
+
+        <!-- Section 3: Data list -->
+        <div class="section">
+            <!-- ⭐ STUDENTS: Change this heading (e.g., "Study History", "All Readings") -->
+            <h2>Data Records</h2>
+            <!-- List will be populated by JavaScript -->
+            <ul id="dataList"></ul>
+        </div>
+    </div>
+
+    <!-- Link to JavaScript file -->
+    <script type="module" src="app.js"></script>
+</body>
+</html>
