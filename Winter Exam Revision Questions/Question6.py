@@ -1,4 +1,4 @@
-""
+"""
 Question 6 – Electricity Bill Calculator 
  
 An energy company wants to calculate monthly electricity bills for its customers. Each customer’s name and electricity usage (in kWh) are stored in separate lists. 
