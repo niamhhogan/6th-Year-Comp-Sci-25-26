@@ -46,9 +46,10 @@ bills = []
 def input_names():
     while True:
         name = input("Enter customer name (or 'end' to finish): ").strip().capitalize()
-        if name.lower() == "end":
+        if name == "End":
             break
-        customer_names.append(name)
+        else:
+         customer_names.append(name)
 
 #part (iii): input usage values using while True and stop at -1
 def input_usage():
@@ -66,6 +67,33 @@ def input_usage():
 #call the functions
 input_names()
 input_usage()
+
+"""Alternative version to the parts above:
+#part (ii): input customer names using while True and stop at 'end'
+def input_names():
+    while True:
+        name = input("Enter customer name (or 'end' to finish): ").strip().capitalize()
+        if name == "End":
+            break
+        else:
+            customer_names.append(name)
+            
+input_names()
+
+#part (iii): input usage values using for loop
+def input_usage():
+   
+    for i in range(len(customer_names)):
+        usage=float(input(f"Enter electricity usage for {customer_names[i]}, or -1 to finish"))
+        if usage == -1:
+            break
+        if usage < 0:
+            print("Invalid entry. Usage cannot be negative.")
+        else:
+            usage_list.append(usage)
+            
+input_usage()
+"""
 
 #part (iv): display both lists
 print("\nCustomer Names:")
